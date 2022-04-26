@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preload and prefetch resources -->
+    <!-- <link rel="next" href="tena_juhmer_resume.pdf"> -->
+    <link rel="preconnect" href="https://github.com/AxiosDeminence" />
+    <link rel="preconnect" href="https://www.linkedin.com/in/juhmer-tena/" />
+
+    <link rel="prefetch" href="icons/envelope.svg" as="image" />
+    <link rel="prefetch" href="icons/github.svg" as="image" />
+    <link rel="prefetch" href="icons/linkedin.svg" as="image" />
+    <link rel="prefetch" href="icons/telephone.svg" as="image" />
+    <link rel="prefetch" href="project_images/default.svg" as="image" />
+    <link rel="prefetch" href="icons/close.svg" as="image" />
+
+    <!-- I would much rather use modulepreload but it is not adopted by Firefox or Safari -->
+    <link rel="preload" href="dialog-polyfill/dist/dialog-polyfill.esm.js" as="script" />
+
+    <link rel="stylesheet" href="main.css" />
+    <!-- Module types are always deferred -->
+    <script src="main.js" type="module" async></script>
+
+    <!-- Use the dialog polyfill for better support (eg. Firefox pre v98)-->
+    <link rel="stylesheet" href="dialog-polyfill/dist/dialog-polyfill.css" />
+    <title>Juhmer Tena's Portfolio Website</title>
+  </head>
+
+  <body>
+    <template id="project-template">
+      <style>
+        #preview {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          height: 100%;
+          justify-content: space-around;
+        }
+
+        #preview:hover {
+          cursor: pointer;
+        }
+
+        img,
+        ::slotted(img) {
+          max-width: min(20rem, 40%);
+          width: min(20rem, 40%);
+        }
+
+        #desc-modal {
+          text-align: left;
+          max-width: 80%;
+          max-height: 80%;
+        }
+
+        #close-modal-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: red;
+          max-width: 1.5em;
+          width: 1.5em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          line-height: 1.2;
+        }
+      </style>
+
+      <section id="preview">
+        <h3>
+          <slot name="title">Project Title</slot>
+        </h3>
+        <!-- https://icons.getbootstrap.com/icons/card-image/ -->
+        <slot name="preview-img">
+          <img src="project_images/default.svg" alt="default project image" />
+        </slot>
+        <slot name="brief">
+          <p>Lorem ipsum dolor</p>
+        </slot>
+      </section>
+      <!-- If I wasn't making everything myself, this could be replaced with A11Y-dialog -->
+      <dialog id="desc-modal" aria-modal="true">
+        <input type="image" id="close-modal-btn" src="icons/close.svg" alt="close modal button" />
+        <!-- Replaced when connected to the DOM -->
+        <h4>
+          <slot name="title">Project title</slot>
+        </h4>
+        <slot name="detailed-desc">
+          <p>Sed ut perspiciatis</p>
+        </slot>
+      </dialog>
+    </template>
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li>
+            <a href="tena_juhmer_resume.pdf" rel="noreferrer">Resume</a>
+          </li>
+          <li><a href="#contact-info">Contact</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h1>Juhmer Tena</h1>
+        <h2>About Me</h2>
+        <p>
+          I'm Juhmer Tena, a Computer Science (B.S.) student at University of California - San Diego
+          and an aspiring Software Engineer. I'll be graduating in June 2022 and looking for
+          Full-Time employment.
+        </p>
+        <p>
+          My technical skills mainly revolve around backend development including and not limited to
+          working with relational databases and creating REST APIs, but also have some working
+          knowledge on frontend web development.
+        </p>
+        <p>
+          You can find
+          <a href="tena_juhmer_resume.pdf" target="_blank" rel="noreferrer">
+            my resume by clicking this link.
+          </a>
+        </p>
+      </section>
+      <section id="contact-info">
+        <h3>My Contact Info</h3>
+        <!-- I'm just using spans here to prevent Firefox and Chromium-based browsers from rendering underlines differently -->
+        <a href="mailto:juhmertena@gmail.com" id="email">
+          <span>Email</span>
+        </a>
+        <a href="https://github.com/AxiosDeminence" id="github">
+          <span>Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juhmer-tena/" id="linkedin">
+          <span>LinkedIn</span>
+        </a>
+        <div id="phone">
+          <span>Phone number: +1 (619) 621-0793</span>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>
+          Academic and personal projects. You can click on each project to bring up a modal for a
+          more in-depth description and source code if available. Some projects may not have source
+          code available due to their nature as academic projects.
+        </p>
+        <div id="project-list">
+          <article is="my-project">
+            <span slot="title">Portfolio Website</span>
+            <p slot="brief">
+              The website that you're seeing right now! Responsive and uses web components.
+            </p>
+            <article slot="detailed-desc">
+              <p>
+                Initial Creation Date:
+                <strong>Mar. 28, 2022</strong>
+              </p>
+              <p>
+                This portfolio website was created to maintain a list of projects, contact
+                information, and my resume. Entirely written in native HTML, JS, and CSS and does
+                not include any external libraries or source code. The icons within the webpage are
+                taken from Bootstrap v1.8.1.
+              </p>
+              <h5>Notable things about this project:</h5>
+              <dl>
+                <dt>Web Components:</dt>
+                <dd>
+                  I ended up extending the
+                  <code>&lt;article&gt;</code>
+                  element to create each project. This really helped when I was creating and adding
+                  projects to this website since it helped to keep everything relatively modular
+                  while allowing me some customizability.
+                </dd>
+              </dl>
+            </article>
+          </article>
+          <article is="my-project">
+            <span slot="title">Pomodoro Timer</span>
+            <img
+              slot="preview-img"
+              src="project_images/pomodoro/landing_page.webp"
+              alt="pomodoro timer preview image" />
+            <p slot="brief">
+              Web Site aimed at helping users boost their productivity with better time and task
+              management.
+            </p>
+            <article slot="detailed-desc">
+              <p>
+                Start Date -- End Date:
+                <strong>Jan. 19, 2021 -- Mar. 20, 2021</strong>
+              </p>
+              <section class="project-images">
+                <figure>
+                  <img src="project_images/pomodoro/landing_page.webp" />
+                  <figcaption>Main page</figcaption>
+                </figure>
+                <figure>
+                  <img src="project_images/pomodoro/onboarding.webp" />
+                  <figcaption>Tutorial modal for the app</figcaption>
+                </figure>
+                <figure>
+                  <img src="project_images/pomodoro/settings+tasklist.webp" />
+                  <figcaption>Settings and tasklist menus</figcaption>
+                </figure>
+              </section>
+
+              <p>
+                This was originally created as an academic project in my Software Engineering
+                course. The ultimate goal of the course was to understand how to work in a team
+                while practicing Agile methodologies to deliver a product that met a mock client's
+                request and specifications. This project took eight weeks until its completion.
+              </p>
+              <h5>Roles in the collaborative project:</h5>
+              <ul>
+                <li>
+                  Deployed CI/CD pipeline using GitHub Actions to perform E2E testing with
+                  <a href="https://www.cypress.io/">Cypress</a>
+                  and
+                  <a href="https://jestjs.io/">Jest</a>
+                  .
+                </li>
+                <li>
+                  Identified and developed necessary and quality of life features such as a tasklist
+                  and audible timer.
+                </li>
+                <li>
+                  Created tickets and reviewed others' pull requests to implement planned features.
+                </li>
+                <li>
+                  Participated in daily standup meetings with teammates and weekly meetings with the
+                  mock client.
+                </li>
+              </ul>
+              <h5>Relevant links:</h5>
+              <ul>
+                <li>
+                  <a href="https://github.com/malcolmmcswain/cse110-w21-group5">
+                    Github source code
+                  </a>
+                </li>
+                <li>
+                  <a href="https://malcolmmcswain.github.io/cse110-w21-group5/">Website demo</a>
+                </li>
+              </ul>
+            </article>
+          </article>
+          <article is="my-project">
+            <span slot="title">Roleplay Roller Scraper</span>
+            <p slot="brief">
+              NodeJS and Node-API powered web scraper to save a live relational database with rows
+              accessible on a website.
+            </p>
+            <article slot="detailed-desc">
+              <p>
+                Some asynchronous roleplay communities use traditional tabletop RPG mechanics that
+                would require the use of dice for some randomness. One community that I was a part
+                of had a website dedicated to these rolls, but the owner of the website eventually
+                became inactive and drifted away from the community. In order to preserve these
+                rolls, which were necessary for some recordkeeping, I made a web scraper to save
+                them into a CSV file using NodeJS to make and parse requests and Node-API to link a
+                csv builder to find out the next point.
+              </p>
+              <div class="notable-list">
+                <h5>Notable things about this project:</h5>
+                <dl>
+                  <dt>Project structure management and git submodules</dt>
+                  <dd>
+                    This project taught me a lot about different ways to handle submodule
+                    directories. Eventually, I ended up doing a hybrid model where I had library
+                    code in the root directory in their own folders and a distributed directory
+                    structure for bespoken code due to the simplicity of the project.
+                  </dd>
+                  <dt>Creating Node.js Native Addons with Node-API/N-API</dt>
+                  <dd>
+                    The project originally was just going to be a wrapper for a CSV parser that
+                    would end up looking for the missing IDs within a list of files. However, I
+                    ended up deciding to create it into a full fledged web crawler. As such, I
+                    needed to port my already-written C code to NodeJS. Although it took a while to
+                    learn, I learned how to create native Node.js addons using Node-API.
+                  </dd>
+                  <dt>
+                    Makefiles, implicit variables and rules, and automatic dependency generation
+                  </dt>
+                  <dd>
+                    While creating the Makefile, the first thing I learned was implicit variables
+                    and rules where Makefiles can imply dependencies based off of the target (such
+                    as main.c creating main.o) and compilation rules. These include implicit
+                    variables and tags that could be set to use these implicit rules. However, since
+                    I used a distributed directory structure, I had to write my own rules to compile
+                    to different directories. This led to me researching automatic dependency
+                    generation through some C preprocessor flags ultimately simplifying the Makefile
+                    structure instead of explicitly writing every dependency.
+                  </dd>
+                  <dt>Linking C object files and libraries</dt>
+                  <dd>
+                    While a minor part of the project, I learned how to link shared dynamic
+                    libraries and static libraries even in different directories.
+                  </dd>
+                  <dt>Making ANSI- and ISO C89/C90-compliant C code</dt>
+                  <dd>
+                    While I do end up using GNULib's argp library to create a main executable
+                    (mainly for testing), all other code is ANSI compliant. While writing this, I
+                    actually had the chance to learn the reasons for certain specifications of the
+                    C89/C90 standards and how to accomodate the strict standards.
+                  </dd>
+                </dl>
+              </div>
+              <div class="relevant-links">
+                <h5>Relevant links</h5>
+                <ul>
+                  <li>
+                    <a href="https://github.com/AxiosDeminence/MissingID_Experiment">
+                      Github source code
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </article>
+          <article is="my-project">
+            <span slot="title">Roleplay Market Inventory Manager</span>
+            <p slot="brief">
+              PostgreSQL database and REST API using Django to help roleplayers manage inventories
+              and transactions.
+            </p>
+            <article slot="detailed-desc">
+              <p>
+                As someone who participates in a lot of forum roleplaying communities, it can be a
+                pain to track and manage a character's inventory. If characters are trading amongst
+                themselves, it can also be a pain for people who try and track which character which
+                items as well. I ended up creating this project as a sort of experiment to see how I
+                would try and solve this problem. Although it never saw use because the community
+                decided that requiring its use would make things unnecessarily difficult for casual
+                members, it still exists as a proof-of-concept.
+              </p>
+              <ul>
+                <li>
+                  Leveraged
+                  <a href="https://www.djangoproject.com/">Django</a>
+                  and
+                  <a href="https://www.django-rest-framework.org/">Django REST Framework</a>
+                  to manage a PostgreSQL database.
+                </li>
+                <li>
+                  Designed a relational schema divided into users, characters, inventories, and
+                  transactions.
+                </li>
+                <li>
+                  Used
+                  <a href="https://django-rest-framework-simplejwt.readthedocs.io/en/latest/">
+                    Simple JWT
+                  </a>
+                  for authentication of privileges for resource management.
+                </li>
+              </ul>
+            </article>
+          </article>
+          <article is="my-project">
+            <span slot="title">Meeting Time Recommender</span>
+            <p slot="brief">
+              Native Android app aimed at helping students organize meeting schedules.
+            </p>
+            <article slot="detailed-desc">
+              <p>Start Date -- End Date: Oct. 15 2019 -- Dec. 1 2019</p>
+              <p>
+                A project for the IEEE chapter at UCSD's quarterly project competition of Fall 2019.
+                The goal of the competition was to create a product that would help students with
+                school with a team of 4 or 5. The project's aim was to allow users to submit their
+                schedules and create and join groups to receive possible meeting times.
+              </p>
+              <h5>Roles in the collaborative project:</h5>
+              <ul>
+                <li>
+                  Responsible for coordinating a team of 4 with varying levels of computer
+                  programming experience.
+                </li>
+                <li>
+                  Used Heroku for our backend and Java for Android for the frontend of our app.
+                </li>
+                <li>
+                  Developed a REST API using
+                  <a href="https://falconframework.org/">Falcon</a>
+                  webserver connected to PostgreSQL databse.
+                </li>
+              </ul>
+              <h5>Relevant links:</h5>
+              <ul>
+                <li>
+                  <a href="https://github.com/AxiosDeminence/trito-n-meet">Github source code</a>
+                </li>
+              </ul>
+            </article>
+          </article>
+          <article is="my-project">
+            <span slot="title">Scalable Database</span>
+            <p slot="brief">Distributed database based on the Chord protocol and Go.</p>
+            <article slot="detailed-desc">
+              <p>
+                A database with decentralized file storage clusters and a centralized cluster
+                manager based on the Chord protocol. The goal was to dynamically add and remove
+                clusters, allowing data migration between clusters by determining the predecessors
+                and succesors using a consistent hashing method. Versioning was incremented based on
+                differences of hashes of 4096-bit blocks of files (deleted files are marked as
+                empty, but as an additional version); the database always assumed that if both the
+                client and server's representation of the file changed, the server was correct to
+                maintain consistent versioning between different clients. Servers and clients were
+                coded in Go to ensure ease of concurrent connections.The final product was used and
+                tested across multiple AWS EC2 instances in differnet regions.
+              </p>
+              <ul>
+                <li>
+                  Developed client and server in
+                  <a href="https://go.dev/">Go</a>
+                  to foster concurrent connections.
+                </li>
+                <li>
+                  Utilized the Chord protocol for a distributed database over many file storage
+                  clusters to provide redundancy in case of network failures.
+                </li>
+                <li>Leveraged AWS EC2 instances for deployment of the servers and clusters.</li>
+              </ul>
+            </article>
+          </article>
+          <article is="my-project">
+            <span slot="title">Food-101 Classifier</span>
+            <img
+              slot="preview-img"
+              src="project_images/image-101/first_layer.webp"
+              alt="feature maps of model" />
+            <p slot="brief">
+              Different deep learning models based on Pytorch to classify images on a subset of the
+              Food-101 dataset.
+            </p>
+            <article slot="detailed-desc">
+              <section class="project-images">
+                <figure>
+                  <img src="project_images/image-101/first_layer.webp" />
+                  <figcaption>
+                    Feature maps represented in the first layer of our custom architecture
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img src="project_images/image-101/valid_acc_res_pft.webp" />
+                  <figcaption>
+                    Validation accuracy when leveraging ResNet18 for transfer learning.
+                  </figcaption>
+                </figure>
+              </section>
+              <p>
+                School project accomplished during a course on deep networks. The goal was to see
+                how different architectures and hyperparameters performed on a classification
+                problem using a subset of the Food-101 dataset. We used Pytorch in order to perform
+                CUDA-accelerated learning and to import a ResNet (Residual network) and VGGNet
+                (Visual Geometry Group Network) for fine-tuned training by replacing the
+                classification layer.
+              </p>
+              <ul>
+                <li>Created validation pipeline to test different set of hyperparameters.</li>
+                <li>
+                  Used
+                  <a href="https://pytorch.org/">Pytorch</a>
+                  with CUDA to accelerate learning on models.
+                </li>
+                <li>
+                  Leveraged already available models trained on ImageNet for transfer learning for
+                  ~66% validation accuracy on a subset of the Food-101 dataset.
+                </li>
+              </ul>
+            </article>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <p>"test"</p>
+      </nav>
+    </footer>
+    <script src="dialog-polyfill/dist/dialog-polyfill.js"></script>
+    <script type="module">
+      window.addEventListener("DOMContentLoaded", (_event) => {
+        var dialogs = document.querySelectorAll("dialog");
+        dialogs.forEach((elem, _key, _parent) => {
+          dialogPolyFill.registerDialog(elem);
+        });
+      });
+    </script>
+  </body>
+</html>

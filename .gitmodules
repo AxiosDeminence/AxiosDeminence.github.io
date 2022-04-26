@@ -1,0 +1,3 @@
+[submodule "dialog-polyfill"]
+	path = dialog-polyfill
+	url = git@github.com:GoogleChrome/dialog-polyfill.git

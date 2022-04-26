@@ -24,13 +24,22 @@
     <!-- Module types are always deferred -->
     <script src="main.js" type="module" async></script>
 
-    <!-- Use the dialog polyfill for better support (eg. Firefox pre v98)-->
-    <link rel="stylesheet" href="dialog-polyfill/dist/dialog-polyfill.css" />
     <title>Juhmer Tena's Portfolio Website</title>
   </head>
 
   <body>
     <template id="project-template">
+      <script src="dialog-polyfill/dist/dialog-polyfill.js" async></script>
+      <!-- Use the dialog polyfill for better support (eg. Firefox pre v98)-->
+      <link rel="stylesheet" href="dialog-polyfill/dist/dialog-polyfill.css" />
+      <script type="module">
+        window.addEventListener("DOMContentLoaded", (_event) => {
+          var dialogs = document.querySelectorAll("dialog");
+          dialogs.forEach((elem, _key, _parent) => {
+            dialogPolyFill.registerDialog(elem);
+          });
+        });
+      </script>
       <style>
         #preview {
           display: flex;
@@ -490,14 +499,5 @@
         <p>"test"</p>
       </nav>
     </footer>
-    <script src="dialog-polyfill/dist/dialog-polyfill.js"></script>
-    <script type="module">
-      window.addEventListener("DOMContentLoaded", (_event) => {
-        var dialogs = document.querySelectorAll("dialog");
-        dialogs.forEach((elem, _key, _parent) => {
-          dialogPolyFill.registerDialog(elem);
-        });
-      });
-    </script>
   </body>
 </html>

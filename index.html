@@ -10,13 +10,6 @@
     <link rel="preconnect" href="https://github.com/AxiosDeminence" />
     <link rel="preconnect" href="https://www.linkedin.com/in/juhmer-tena/" />
 
-    <link rel="prefetch" href="icons/envelope.svg" as="image" />
-    <link rel="prefetch" href="icons/github.svg" as="image" />
-    <link rel="prefetch" href="icons/linkedin.svg" as="image" />
-    <link rel="prefetch" href="icons/telephone.svg" as="image" />
-    <link rel="prefetch" href="project_images/default.svg" as="image" />
-    <link rel="prefetch" href="icons/close.svg" as="image" />
-
     <!-- I would much rather use modulepreload but it is not adopted by Firefox or Safari -->
     <link rel="prefetch" href="dialog-polyfill/dist/dialog-polyfill.esm.js" as="script" />
 
@@ -182,6 +175,15 @@
                   element to create each project. This really helped when I was creating and adding
                   projects to this website since it helped to keep everything relatively modular
                   while allowing me some customizability.
+                </dd>
+                <dt>Dialog polyfill</dt>
+                <dd>
+                  While creating this website, I learned that the dialog element I was taking
+                  advantage of was just recently added to Firefox 98. In order to support older
+                  versions of Firefox browsers, I decided to implement
+                  <a href="https://github.com/GoogleChrome/dialog-polyfill">
+                    Google Chrome's dialog polyfill.
+                  </a>
                 </dd>
               </dl>
             </article>

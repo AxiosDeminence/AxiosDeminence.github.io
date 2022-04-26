@@ -18,7 +18,7 @@
     <link rel="prefetch" href="icons/close.svg" as="image" />
 
     <!-- I would much rather use modulepreload but it is not adopted by Firefox or Safari -->
-    <link rel="preload" href="dialog-polyfill/dist/dialog-polyfill.esm.js" as="script" />
+    <link rel="prefetch" href="dialog-polyfill/dist/dialog-polyfill.esm.js" as="script" />
 
     <link rel="stylesheet" href="main.css" />
     <!-- Module types are always deferred -->
@@ -29,17 +29,6 @@
 
   <body>
     <template id="project-template">
-      <script src="dialog-polyfill/dist/dialog-polyfill.js" async></script>
-      <!-- Use the dialog polyfill for better support (eg. Firefox pre v98)-->
-      <link rel="stylesheet" href="dialog-polyfill/dist/dialog-polyfill.css" />
-      <script type="module">
-        window.addEventListener("DOMContentLoaded", (_event) => {
-          var dialogs = document.querySelectorAll("dialog");
-          dialogs.forEach((elem, _key, _parent) => {
-            dialogPolyFill.registerDialog(elem);
-          });
-        });
-      </script>
       <style>
         #preview {
           display: flex;

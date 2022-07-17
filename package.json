@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  },
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Juhmer Tena's portfolio website. Includes projects, resume, and short bio.",
+  "repository": "https://github.com/AxiosDeminence/AxiosDeminence.github.io",
+  "author": "juhmertena@gmail.com",
+  "private": true
+}

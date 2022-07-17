@@ -1,0 +1,18 @@
+<article class="my-project">
+    <section class="project-preview">
+        <h3>{{project.data.title | default('Project title')}}</h3>
+        <img
+            src="{{project.data.preview_img | default('/project_images/default.svg') | url}}"
+            alt="{{project.data.preview_img_desc | default('default project image')}}"
+            class="preview-img"
+        >
+        <p>{{project.data.brief_desc | default('Lorem ipsum dolor')}}</p>
+    </section>
+    <dialog class="desc-modal" aria-model="true">
+        <input type="image" class="close-modal-btn" src="{{ '/icons/close.svg' | url}}">
+        <h4>{{project.data.title | default('Project title')}}</h4>
+        <article class="detailed-desc">
+            {{project.templateContent | default('<p>Sed ut perspiciatis</p>') | safe}}
+        </article>
+    </dialog>
+</article>

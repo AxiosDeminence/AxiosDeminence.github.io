@@ -1,0 +1,35 @@
+---
+permalink: false
+tags: project
+title: Roleplay Market Inventory Manager
+brief_desc: PostgreSQL database and REST API using Django to help roleplayers manage inventories and transactions.
+---
+<p>
+  As someone who participates in a lot of forum roleplaying communities, it can be a
+  pain to track and manage a character's inventory. If characters are trading amongst
+  themselves, it can also be a pain for people who try and track which character which
+  items as well. I ended up creating this project as a sort of experiment to see how I
+  would try and solve this problem. Although it never saw use because the community
+  decided that requiring its use would make things unnecessarily difficult for casual
+  members, it still exists as a proof-of-concept.
+</p>
+<ul>
+  <li>
+    Leveraged
+    <a href="https://www.djangoproject.com/">Django</a>
+    and
+    <a href="https://www.django-rest-framework.org/">Django REST Framework</a>
+    to manage a PostgreSQL database.
+  </li>
+  <li>
+    Designed a relational schema divided into users, characters, inventories, and
+    transactions.
+  </li>
+  <li>
+    Used
+    <a href="https://django-rest-framework-simplejwt.readthedocs.io/en/latest/">
+      Simple JWT
+    </a>
+    for authentication of privileges for resource management.
+  </li>
+</ul>

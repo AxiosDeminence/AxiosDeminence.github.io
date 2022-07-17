@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preload and prefetch resources -->
+    <!-- <link rel="next" href="tena_juhmer_resume.pdf"> -->
+    <link rel="preconnect" href="https://github.com/AxiosDeminence" />
+    <link rel="preconnect" href="https://www.linkedin.com/in/juhmer-tena/" />
+
+    <link rel="stylesheet" type="text/css" href="{{ '/dialog-polyfill/dialog-polyfill.css' | url }}" />
+    <script src="{{ '/dialog-polyfill/dialog-polyfill.esm.js' | url }}" type="module"></script>
+    <script src="{{ '/dialog-polyfill/dialog-polyfill.js' | url }}" nomodule defer></script>
+
+    <link rel="stylesheet" href="{{ '/main.css' | url }}" />
+    <style>
+      dialog {
+        position: fixed;
+      }
+    </style>
+    <!-- Module types are always deferred -->
+    <script src="{{ '/main.js' | url }}" type="module" defer crossorigin="anonymous"></script>
+
+    <title>Juhmer Tena's Portfolio Website</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li>
+            <a href="{{ '/tena_juhmer_resume.pdf' | url }}" rel="noreferrer">Resume</a>
+          </li>
+          <li><a href="#contact-info">Contact</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h1>Juhmer Tena</h1>
+        <h2>About Me</h2>
+        <p>
+          I'm Juhmer Tena, I studied Computer Science (B.S.) at University of California - San Diego
+          and graduated in June 2022. I am an aspiring Software Engineer and looking for full-time
+          employment.
+        </p>
+        <p>
+          My technical skills mainly revolve around backend development including and not limited to
+          working with relational databases and creating REST APIs, but also have some working
+          knowledge on frontend web development.
+        </p>
+        <p>
+          You can find
+          <a href="tena_juhmer_resume.pdf" target="_blank" rel="noreferrer">
+            my resume by clicking this link.
+          </a>
+        </p>
+      </section>
+      <section id="contact-info">
+        <h3>My Contact Info</h3>
+        <!-- I'm just using spans here to prevent Firefox and Chromium-based browsers from rendering underlines differently -->
+        <a href="mailto:juhmertena@gmail.com" id="email">
+          <span>Email</span>
+        </a>
+        <a href="https://github.com/AxiosDeminence" id="github">
+          <span>Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juhmer-tena/" id="linkedin">
+          <span>LinkedIn</span>
+        </a>
+        <div id="phone">
+          <span>Phone number: +1 (619) 621-0793</span>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>
+          Academic and personal projects. You can click on each project to bring up a modal for a
+          more in-depth description and source code if available. Some projects may not have source
+          code available due to their nature as academic projects.
+        </p>
+        <div id="project-list">
+          {% for project in collections.project %}
+            {% include "_partials/project_partial.njk" %}
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <p>"test"</p>
+      </nav>
+    </footer>
+  </body>
+</html>

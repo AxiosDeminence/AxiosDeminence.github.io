@@ -18,7 +18,6 @@ module.exports = function(eleventyConfig) {
       layouts: '_includes/_layouts'
     },
     htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk',
-    pathPrefix: 'AxiosDeminence.github.io'
+    markdownTemplateEngine: 'njk'
   }
 }

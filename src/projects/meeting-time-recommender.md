@@ -2,9 +2,10 @@
 permalink: false
 tags: project
 title: Meeting Time Recommender
-brief_desc: Native Android app aimed at helping students organize meeting schedules.
+brief_desc: Native Android app aimed at helping students organize meeting
+    schedules.
 ---
-Start Date -- End Date: Oct. 15 2019 -- Dec. 1 2019
+Start Date -- End Date: **Oct. 15 2019 -- Dec. 1 2019**
 
 A project for the IEEE chapter at UCSD's quarterly project competition of Fall
 2019. The goal of the competition was to create a product that would help

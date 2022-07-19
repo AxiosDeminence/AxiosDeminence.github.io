@@ -4,7 +4,8 @@ tags: project
 title: Portfolio website
 preview_img: "/project_images/portfolio-website/main.jpg"
 preview_img_desc: portfolio website preview image
-brief_desc: The website that you're seeing right now! Responsive and uses web components.
+brief_desc: The website that you're seeing right now! Responsive and uses web
+    components.
 ---
 Initial Creation Date: **Mar. 28, 2022**
 
@@ -14,7 +15,9 @@ Initial Creation Date: **Mar. 28, 2022**
     <figcaption>Portfolio website's main page</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/project_images/portfolio-website/example-modal.jpg' | url }}" />
+    <img
+        src="{{ '/project_images/portfolio-website/example-modal.jpg' | url }}"
+    />
     <figcaption>A modal showcasing a project's details</figcaption>
   </figure>
 </section>
@@ -36,8 +39,8 @@ webpage are taken from Bootstrap v1.8.1.
   <dt>Dialog polyfill</dt>
   <dd>
     While creating this website, I learned that the dialog element I was taking
-    advantage of was just recently added to Firefox 98. In order to support older
-    versions of Firefox browsers, I decided to implement
+    advantage of was just recently added to Firefox 98. In order to support
+    older versions of Firefox browsers, I decided to implement
     <a href="https://github.com/GoogleChrome/dialog-polyfill">
         Google Chrome's dialog polyfill.
     </a>

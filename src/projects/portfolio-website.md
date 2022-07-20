@@ -2,7 +2,7 @@
 permalink: false
 tags: project
 title: Portfolio website
-preview_img: "/project_images/portfolio-website/main.jpg"
+preview_img: "/project_images/portfolio-website/main.webp"
 preview_img_desc: portfolio website preview image
 brief_desc: The website that you're seeing right now! Responsive and uses web
     components.
@@ -11,12 +11,12 @@ Initial Creation Date: **Mar. 28, 2022**
 
 <section class="project-images">
   <figure>
-    <img src="{{ '/project_images/portfolio-website/main.jpg' | url }}" />
+    <img src="{{ '/project_images/portfolio-website/main.webp' | url }}" />
     <figcaption>Portfolio website's main page</figcaption>
   </figure>
   <figure>
     <img
-        src="{{ '/project_images/portfolio-website/example-modal.jpg' | url }}"
+        src="{{ '/project_images/portfolio-website/example-modal.webp' | url }}"
     />
     <figcaption>A modal showcasing a project's details</figcaption>
   </figure>

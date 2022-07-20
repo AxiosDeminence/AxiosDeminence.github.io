@@ -104,6 +104,7 @@ dd {
     padding-bottom: 1em;
     list-style-type: disc;
     list-style-position: inside;
+    width: fit-content;
 }
 
 #contact-info span {
@@ -133,12 +134,11 @@ dd {
 
 #project-list {
     display: grid;
-    /*  */
     grid-template-columns: repeat(auto-fit, minmax(max(15rem, 25%), 1fr));
     grid-gap: 1rem;
 }
 
-.my-project {
+my-project {
     padding: 0.5em;
     border: 5px solid rgb(177, 177, 177);
     border-radius: 5%;
@@ -166,10 +166,10 @@ dd {
     width: min(20rem, 40%);
 }
 
-/* .project-images {
+.project-images {
     display: flex;
     flex-wrap: wrap;
-} */
+}
 
 .project-images {
     display: grid;
@@ -189,6 +189,7 @@ dd {
     text-align: left;
     max-width: 80%;
     max-height: 80%;
+    position: fixed;
 }
 
 .detailed-desc {

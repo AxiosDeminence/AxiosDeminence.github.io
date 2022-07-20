@@ -1,19 +1,25 @@
+const dialogPolyfillCss = require.resolve('dialog-polyfill/dist/dialog-polyfill.css');
+const dialogPolyfillJs = require.resolve('dialog-polyfill/dist/dialog-polyfill.js');
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.setNunjucksEnvironmentOptions({
     trimBlocks: true,
     lstripBlocks: true
   });
 
-  eleventyConfig.addPassthroughCopy('project_images');
-  eleventyConfig.addPassthroughCopy('icons');
+  eleventyConfig.addPassthroughCopy('public');
   eleventyConfig.addPassthroughCopy('src/main.*')
-  eleventyConfig.addPassthroughCopy({'dialog-polyfill/dist': 'dialog-polyfill'})
-  eleventyConfig.addPassthroughCopy('tena_juhmer_resume.pdf');
+  eleventyConfig.addPassthroughCopy({
+    [dialogPolyfillCss]: 'dialog-polyfill/dialog-polyfill.css',
+    [dialogPolyfillJs]: 'dialog-polyfill/dialog-polyfill.js',
+  });
+  eleventyConfig.addPassthroughCopy('src/polyfiller.js');
+  eleventyConfig.addPassthroughCopy('src/vite.config.js');
 
   return {
     dir: {
       input: 'src',
-      output: 'dist',
+      output: 'eleventy-output',
       includes: '_includes',
       layouts: '_includes/_layouts'
     },

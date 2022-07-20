@@ -14,16 +14,11 @@
       type="text/css"
       href="{{ '/dialog-polyfill/dialog-polyfill.css' | url }}"
     />
-    <script src="{{ '/dialog-polyfill/dialog-polyfill.esm.js' | url }}" type="module"></script>
     <script src="{{ '/dialog-polyfill/dialog-polyfill.js' | url }}" nomodule defer></script>
+    <script src="{{ '/polyfiller.js' | url }}" nomodule defer></script>
 
     <link rel="stylesheet" href="{{ '/main.css' | url }}" />
-    <style>
-      dialog {
-        position: fixed;
-      }
-    </style>
-    <script src="{{ '/main.js' | url }}" type="module" crossorigin="anonymous"></script>
+    <script src="{{ '/main.esm.js' | url }}" type="module" crossorigin="anonymous"></script>
 
     <title>Juhmer Tena's Portfolio Website</title>
   </head>

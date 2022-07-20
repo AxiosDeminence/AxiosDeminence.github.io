@@ -6,7 +6,7 @@ preview_img: "/project_images/pomodoro/landing_page.webp"
 preview_img_desc: pomodoro timer preview image
 brief_desc: Web Site aimed at helping users boost their productivity with better
     time and task management.
-strength: 3
+rank: 3
 ---
 Start Date -- End Date: **Jan. 19, 2021 -- Mar. 20, 2021**
 

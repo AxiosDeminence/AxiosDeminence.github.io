@@ -6,7 +6,7 @@ preview_img: "/project_images/portfolio-website/main.webp"
 preview_img_desc: portfolio website preview image
 brief_desc: The website that you're seeing right now! Responsive and uses web
     components.
-strength: 1
+rank: 1
 ---
 Initial Creation Date: **Mar. 28, 2022**
 

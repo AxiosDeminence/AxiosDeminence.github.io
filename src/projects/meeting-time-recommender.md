@@ -4,7 +4,7 @@ tags: project
 title: Meeting Time Recommender
 brief_desc: Native Android app aimed at helping students organize meeting
     schedules.
-strength: 7
+rank: 7
 ---
 Start Date -- End Date: **Oct. 15 2019 -- Dec. 1 2019**
 

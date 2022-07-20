@@ -3,7 +3,7 @@ permalink: false
 tags: project
 title: Scalable Database
 brief_desc: Distributed database based on the Chord protocol and Go.
-strength: 4
+rank: 4
 ---
 A database with decentralized file storage clusters and a centralized cluster
 manager based on the Chord protocol. The goal was to dynamically add and remove
@@ -14,7 +14,7 @@ files are marked as empty, but as an additional version); the database always
 assumed that if both the client and server's representation of the file changed,
 the server was correct to maintain consistent versioning between different
 clients. Servers and clients were coded in Go to ensure ease of concurrent
-connections.The final product was used and tested across multiple AWS EC2
+connections. The final product was used and tested across multiple AWS EC2
 instances in differnet regions.
 
 * Developed client and server in [Go](https://go.dev) to foster concurrent

@@ -6,7 +6,7 @@ preview_img: "/project_images/image-101/first_layer.webp"
 preview_img_desc: feature maps of model
 brief_desc: Different deep learning models based on Pytorch to classify images
     on a subset of the Food-101 dataset.
-strength: 5
+rank: 5
 ---
 <section class="project-images">
   <figure>

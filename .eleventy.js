@@ -18,7 +18,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection('sortedProjects', function(collectionApi) {
     return collectionApi.getFilteredByTag('project').sort(function (a, b) {
-      return a.rank > b.rank;
+      return a.data.rank - b.data.rank;
     });
   });
 

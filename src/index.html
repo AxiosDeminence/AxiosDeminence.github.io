@@ -85,7 +85,7 @@
           code available due to their nature as academic projects.
         </p>
         <div id="project-list">
-          {% for project in collections.project %}
+          {% for project in collections.sortedProjects %}
             {% include "_partials/project_partial.njk" %}
           {% endfor %}
         </div>

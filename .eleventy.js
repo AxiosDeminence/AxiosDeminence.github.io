@@ -16,6 +16,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/polyfiller.js');
   eleventyConfig.addPassthroughCopy('src/vite.config.js');
 
+  eleventyConfig.addCollection('sortedProjects', function(collectionApi) {
+    return collectionApi.getFilteredByTag('project').sort(function (a, b) {
+      return a.rank > b.rank;
+    });
+  });
+
   return {
     dir: {
       input: 'src',

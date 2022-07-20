@@ -6,6 +6,7 @@ preview_img: "/project_images/pomodoro/landing_page.webp"
 preview_img_desc: pomodoro timer preview image
 brief_desc: Web Site aimed at helping users boost their productivity with better
     time and task management.
+strength: 3
 ---
 Start Date -- End Date: **Jan. 19, 2021 -- Mar. 20, 2021**
 
@@ -31,6 +32,8 @@ client's request and specifications. This project took eight weeks until its
 completion.
 
 ##### Roles in the collaborative project:
+* Co-managed a team of eight developers to design and developer a web app using
+    native web technologies.
 * Deployed CI/CD pipeline using GitHub Actions to perform E2E testing with
     [Cypress](https://www.cypress.io) and [Jest](https://jestjs.io).
 * Identified and developed necessary and quality of life features such as a

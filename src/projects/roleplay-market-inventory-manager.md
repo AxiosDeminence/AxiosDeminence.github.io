@@ -4,6 +4,7 @@ tags: project
 title: Roleplay Market Inventory Manager
 brief_desc: PostgreSQL database and REST API using Django to help roleplayers
     manage inventories and transactions.
+strength: 6
 ---
 As someone who participates in a lot of forum roleplaying communities, it can be
 a pain to track and manage a character's inventory. If characters are trading

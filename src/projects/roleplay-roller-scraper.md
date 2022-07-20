@@ -4,6 +4,7 @@ tags: project
 title: Roleplay Roller Scraper
 brief_desc: NodeJS and Node-API powered web scraper to save a live relational
     database with rows accessible on a website.
+strength: 2
 ---
 Some asynchronous roleplay communities use traditional tabletop RPG mechanics
 that would require the use of dice for some randomness. One community that I was

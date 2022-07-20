@@ -9,23 +9,16 @@
     <link rel="preconnect" href="https://github.com/AxiosDeminence" />
     <link rel="preconnect" href="https://www.linkedin.com/in/juhmer-tena/" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/dialog-polyfill/dialog-polyfill.css"
-    />
-    <script src="/dialog-polyfill/dialog-polyfill.esm.js" type="module"></script>
+    
     <script src="/dialog-polyfill/dialog-polyfill.js" nomodule defer></script>
+    <script src="/polyfiller.js" nomodule defer></script>
 
-    <link rel="stylesheet" href="/main.css" />
-    <style>
-      dialog {
-        position: fixed;
-      }
-    </style>
-    <script src="/main.js" type="module" crossorigin="anonymous"></script>
+    
+    
 
     <title>Juhmer Tena's Portfolio Website</title>
+    <script type="module" crossorigin src="/assets/index.8b4147bd.js"></script>
+    <link rel="stylesheet" href="/assets/index.c1835c72.css">
   </head>
 
   <body>
@@ -85,20 +78,20 @@
           code available due to their nature as academic projects.
         </p>
         <div id="project-list">
-<article class="my-project">
-    <section class="project-preview">
-        <h3>Food-101 Classifier</h3>
-        <img
+<my-project title="Food-101 Classifier" class="my-project">
+    <section class="project-preview" slot="project-preview">
+        <h3 slot="title">Food-101 Classifier</h3>
+        <img slot="img"
             src="/project_images/image-101/first_layer.webp"
             alt="feature maps of model"
             class="preview-img"
         >
         <p>Different deep learning models based on Pytorch to classify images on a subset of the Food-101 dataset.</p>
     </section>
-    <dialog class="desc-modal" aria-modal="true">
+    <dialog slot="desc-modal" class="desc-modal">
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
-        <h4>Food-101 Classifier</h4>
         <article class="detailed-desc">
+            <h4>Food-101 Classifier</h4>
             <section class="project-images">
   <figure>
     <img src="/project_images/image-101/first_layer.webp" />
@@ -129,20 +122,20 @@ for ~66% validation accuracy on a subset of the Food-101 dataset.</li>
 
         </article>
     </dialog>
-</article><article class="my-project">
-    <section class="project-preview">
-        <h3>Meeting Time Recommender</h3>
-        <img
+</my-project><my-project title="Meeting Time Recommender" class="my-project">
+    <section class="project-preview" slot="project-preview">
+        <h3 slot="title">Meeting Time Recommender</h3>
+        <img slot="img"
             src="/project_images/default.svg"
             alt="default project image"
             class="preview-img"
         >
         <p>Native Android app aimed at helping students organize meeting schedules.</p>
     </section>
-    <dialog class="desc-modal" aria-modal="true">
+    <dialog slot="desc-modal" class="desc-modal">
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
-        <h4>Meeting Time Recommender</h4>
         <article class="detailed-desc">
+            <h4>Meeting Time Recommender</h4>
             <p>Start Date -- End Date: <strong>Oct. 15 2019 -- Dec. 1 2019</strong></p>
 <p>A project for the IEEE chapter at UCSD's quarterly project competition of Fall
 2019. The goal of the competition was to create a product that would help
@@ -164,20 +157,20 @@ connected to PostgreSQL databse.</li>
 
         </article>
     </dialog>
-</article><article class="my-project">
-    <section class="project-preview">
-        <h3>Pomodoro Timer WI21</h3>
-        <img
+</my-project><my-project title="Pomodoro Timer WI21" class="my-project">
+    <section class="project-preview" slot="project-preview">
+        <h3 slot="title">Pomodoro Timer WI21</h3>
+        <img slot="img"
             src="/project_images/pomodoro/landing_page.webp"
             alt="pomodoro timer preview image"
             class="preview-img"
         >
         <p>Web Site aimed at helping users boost their productivity with better time and task management.</p>
     </section>
-    <dialog class="desc-modal" aria-modal="true">
+    <dialog slot="desc-modal" class="desc-modal">
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
-        <h4>Pomodoro Timer WI21</h4>
         <article class="detailed-desc">
+            <h4>Pomodoro Timer WI21</h4>
             <p>Start Date -- End Date: <strong>Jan. 19, 2021 -- Mar. 20, 2021</strong></p>
 <section class="project-images">
   <figure>
@@ -217,20 +210,20 @@ with the mock client.</li>
 
         </article>
     </dialog>
-</article><article class="my-project">
-    <section class="project-preview">
-        <h3>Portfolio website</h3>
-        <img
+</my-project><my-project title="Portfolio website" class="my-project">
+    <section class="project-preview" slot="project-preview">
+        <h3 slot="title">Portfolio website</h3>
+        <img slot="img"
             src="/project_images/portfolio-website/main.jpg"
             alt="portfolio website preview image"
             class="preview-img"
         >
         <p>The website that you&#39;re seeing right now! Responsive and uses web components.</p>
     </section>
-    <dialog class="desc-modal" aria-modal="true">
+    <dialog slot="desc-modal" class="desc-modal">
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
-        <h4>Portfolio website</h4>
         <article class="detailed-desc">
+            <h4>Portfolio website</h4>
             <p>Initial Creation Date: <strong>Mar. 28, 2022</strong></p>
 <section class="project-images">
   <figure>
@@ -270,20 +263,20 @@ webpage are taken from Bootstrap v1.8.1.</p>
 
         </article>
     </dialog>
-</article><article class="my-project">
-    <section class="project-preview">
-        <h3>Roleplay Market Inventory Manager</h3>
-        <img
+</my-project><my-project title="Roleplay Market Inventory Manager" class="my-project">
+    <section class="project-preview" slot="project-preview">
+        <h3 slot="title">Roleplay Market Inventory Manager</h3>
+        <img slot="img"
             src="/project_images/default.svg"
             alt="default project image"
             class="preview-img"
         >
         <p>PostgreSQL database and REST API using Django to help roleplayers manage inventories and transactions.</p>
     </section>
-    <dialog class="desc-modal" aria-modal="true">
+    <dialog slot="desc-modal" class="desc-modal">
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
-        <h4>Roleplay Market Inventory Manager</h4>
         <article class="detailed-desc">
+            <h4>Roleplay Market Inventory Manager</h4>
             <p>As someone who participates in a lot of forum roleplaying communities, it can be
 a pain to track and manage a character's inventory. If characters are trading
 amongst themselves, it can also be a pain for people who try and track which
@@ -304,20 +297,20 @@ for authentication of privileges for resource management.</li>
 
         </article>
     </dialog>
-</article><article class="my-project">
-    <section class="project-preview">
-        <h3>Roleplay Roller Scraper</h3>
-        <img
+</my-project><my-project title="Roleplay Roller Scraper" class="my-project">
+    <section class="project-preview" slot="project-preview">
+        <h3 slot="title">Roleplay Roller Scraper</h3>
+        <img slot="img"
             src="/project_images/default.svg"
             alt="default project image"
             class="preview-img"
         >
         <p>NodeJS and Node-API powered web scraper to save a live relational database with rows accessible on a website.</p>
     </section>
-    <dialog class="desc-modal" aria-modal="true">
+    <dialog slot="desc-modal" class="desc-modal">
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
-        <h4>Roleplay Roller Scraper</h4>
         <article class="detailed-desc">
+            <h4>Roleplay Roller Scraper</h4>
             <p>Some asynchronous roleplay communities use traditional tabletop RPG mechanics
 that would require the use of dice for some randomness. One community that I was
 a part of had a website dedicated to these rolls, but the owner of the website
@@ -375,20 +368,20 @@ Node-API to link a csv builder to find out the next point.</p>
 </dl>
         </article>
     </dialog>
-</article><article class="my-project">
-    <section class="project-preview">
-        <h3>Scalable Database</h3>
-        <img
+</my-project><my-project title="Scalable Database" class="my-project">
+    <section class="project-preview" slot="project-preview">
+        <h3 slot="title">Scalable Database</h3>
+        <img slot="img"
             src="/project_images/default.svg"
             alt="default project image"
             class="preview-img"
         >
         <p>Distributed database based on the Chord protocol and Go.</p>
     </section>
-    <dialog class="desc-modal" aria-modal="true">
+    <dialog slot="desc-modal" class="desc-modal">
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
-        <h4>Scalable Database</h4>
         <article class="detailed-desc">
+            <h4>Scalable Database</h4>
             <p>A database with decentralized file storage clusters and a centralized cluster
 manager based on the Chord protocol. The goal was to dynamically add and remove
 clusters, allowing data migration between clusters by determining the
@@ -410,7 +403,7 @@ clusters to provide redundancy in case of network failures.</li>
 
         </article>
     </dialog>
-</article>        </div>
+</my-project>        </div>
       </section>
     </main>
     <footer>

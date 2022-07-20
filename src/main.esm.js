@@ -41,13 +41,11 @@ class MyProject extends LitElement {
   async firstUpdated() {
     await new Promise((r) => setTimeout(r, 0));
     this.preview.addEventListener('click', this.showModal);
-    this.closeBtn.addEventListener('click', this.closeModal);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
     this.preview.removeEventListener('click', this.showModal);
-    this.closeBtn.removeEventListener('click', this.closeModal);
   }
 }
 

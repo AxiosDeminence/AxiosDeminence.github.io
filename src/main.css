@@ -117,19 +117,19 @@ dd {
 }
 
 #email {
-    list-style-image: url('icons/envelope.svg');
+    list-style-image: url('/icons/envelope.svg');
 }
 
 #github {
-    list-style-image: url('icons/github.svg');
+    list-style-image: url('/icons/github.svg');
 }
 
 #linkedin {
-    list-style-image: url('icons/linkedin.svg');
+    list-style-image: url('/icons/linkedin.svg');
 }
 
 #phone {
-    list-style-image: url('icons/telephone.svg');
+    list-style-image: url('/icons/telephone.svg');
 }
 
 #project-list {

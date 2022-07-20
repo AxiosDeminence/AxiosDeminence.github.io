@@ -9,7 +9,11 @@
     <link rel="preconnect" href="https://github.com/AxiosDeminence" />
     <link rel="preconnect" href="https://www.linkedin.com/in/juhmer-tena/" />
 
-    <link rel="stylesheet" type="text/css" href="/dialog-polyfill/dialog-polyfill.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/dialog-polyfill/dialog-polyfill.css"
+    />
     <script src="/dialog-polyfill/dialog-polyfill.esm.js" type="module"></script>
     <script src="/dialog-polyfill/dialog-polyfill.js" nomodule defer></script>
 
@@ -29,9 +33,7 @@
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
-          <li>
-            <a href="/tena_juhmer_resume.pdf" rel="noreferrer">Resume</a>
-          </li>
+          <li><a href="/tena_juhmer_resume.pdf" rel="noreferrer">Resume</a></li>
           <li><a href="#contact-info">Contact</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
@@ -54,7 +56,7 @@
         </p>
         <p>
           You can find
-          <a href="tena_juhmer_resume.pdf" target="_blank" rel="noreferrer">
+          <a href="/tena_juhmer_resume.pdf" target="_blank" rel="noreferrer">
             my resume by clicking this link.
           </a>
         </p>
@@ -99,28 +101,30 @@
         <article class="detailed-desc">
             <section class="project-images">
   <figure>
-    <img src="project_images/image-101/first_layer.webp" />
+    <img src="/project_images/image-101/first_layer.webp" />
     <figcaption>
       Feature maps represented in the first layer of our custom architecture
     </figcaption>
   </figure>
   <figure>
-    <img src="project_images/image-101/valid_acc_res_pft.webp" />
+    <img src="/project_images/image-101/valid_acc_res_pft.webp" />
     <figcaption>
       Validation accuracy when leveraging ResNet18 for transfer learning.
     </figcaption>
   </figure>
 </section>
-<p>School project accomplished during a course on deep networks. The goal was to see how different
-architectures and hyperparameters performed on a classification problem using a subset of the
-Food-101 dataset. We used Pytorch in order to perform CUDA-accelerated learning and to import a
-ResNet (Residual network) and VGGNet (Visual Geometry Group Network) for fine-tuned training by
+<p>School project accomplished during a course on deep networks. The goal was to
+see how different architectures and hyperparameters performed on a
+classification problem using a subset of the Food-101 dataset. We used Pytorch
+in order to perform CUDA-accelerated learning and to import a ResNet (Residual
+network) and VGGNet (Visual Geometry Group Network) for fine-tuned training by
 replacing the classification layer.</p>
 <ul>
 <li>Created validation pipeline to test different set of hyperparameters.</li>
-<li>Used <a href="https://pytorch.org/">Pytorch</a> with CUDA to accelerate learning on models.</li>
-<li>Leveraged already available models trained on ImageNet for transfer learning for
-~66% validation accuracy on a subset of the Food-101 dataset.</li>
+<li>Used <a href="https://pytorch.org/">Pytorch</a> with CUDA to accelerate learning on
+models.</li>
+<li>Leveraged already available models trained on ImageNet for transfer learning
+for ~66% validation accuracy on a subset of the Food-101 dataset.</li>
 </ul>
 
         </article>
@@ -139,7 +143,7 @@ replacing the classification layer.</p>
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
         <h4>Meeting Time Recommender</h4>
         <article class="detailed-desc">
-            <p>Start Date -- End Date: Oct. 15 2019 -- Dec. 1 2019</p>
+            <p>Start Date -- End Date: <strong>Oct. 15 2019 -- Dec. 1 2019</strong></p>
 <p>A project for the IEEE chapter at UCSD's quarterly project competition of Fall
 2019. The goal of the competition was to create a product that would help
 2020. students with school with a team of 4 or 5. The project's aim was to allow
@@ -191,15 +195,17 @@ connected to PostgreSQL databse.</li>
 </section>
 <p>This was originally created as an academic project in my Software Engineering
 course. The ultimate goal of the course was to understand how to work in a team
-while practicing Agile methodologies to deliver a product that met a mock client's
-request and specifications. This project took eight weeks until its completion.</p>
+while practicing Agile methodologies to deliver a product that met a mock
+client's request and specifications. This project took eight weeks until its
+completion.</p>
 <h5>Roles in the collaborative project:</h5>
 <ul>
 <li>Deployed CI/CD pipeline using GitHub Actions to perform E2E testing with
 <a href="https://www.cypress.io">Cypress</a> and <a href="https://jestjs.io">Jest</a>.</li>
 <li>Identified and developed necessary and quality of life features such as a
 tasklist and audible timer.</li>
-<li>Created tickets and reviewed other's pull requests to implement planned features.</li>
+<li>Created tickets and reviewed other's pull requests to implement planned
+features.</li>
 <li>Participated in daily standup meetings with teammates and weekly meetings with
 with the mock client.</li>
 </ul>
@@ -232,7 +238,9 @@ with the mock client.</li>
     <figcaption>Portfolio website's main page</figcaption>
   </figure>
   <figure>
-    <img src="/project_images/portfolio-website/example-modal.jpg" />
+    <img
+        src="/project_images/portfolio-website/example-modal.jpg"
+    />
     <figcaption>A modal showcasing a project's details</figcaption>
   </figure>
 </section>
@@ -252,8 +260,8 @@ webpage are taken from Bootstrap v1.8.1.</p>
   <dt>Dialog polyfill</dt>
   <dd>
     While creating this website, I learned that the dialog element I was taking
-    advantage of was just recently added to Firefox 98. In order to support older
-    versions of Firefox browsers, I decided to implement
+    advantage of was just recently added to Firefox 98. In order to support
+    older versions of Firefox browsers, I decided to implement
     <a href="https://github.com/GoogleChrome/dialog-polyfill">
         Google Chrome's dialog polyfill.
     </a>
@@ -282,7 +290,8 @@ amongst themselves, it can also be a pain for people who try and track which
 character which items as well. I ended up creating this project as a sort of
 experiment to see how I would try and solve this problem. Although it never saw
 use because the community decided that requiring its use would make things
-unnecessarily difficult for casual members, it still exists as a proof-of-concept.</p>
+unnecessarily difficult for casual members, it still exists as a
+proof-of-concept.</p>
 <ul>
 <li>Leveraged <a href="https://www.djangoproject.com/">Django</a> and
 <a href="https://www.django-rest-framework.org/">Django REST Framework</a> to manage
@@ -321,29 +330,34 @@ Node-API to link a csv builder to find out the next point.</p>
     <dt>Project structure management and git submodules</dt>
     <dd>
         This project taught me a lot about different ways to handle submodule
-        directories. Eventually, I ended up doing a hybrid model where I had library
-        code in the root directory in their own folders and a distributed directory
-        structure for bespoken code due to the simplicity of the project.
+        directories. Eventually, I ended up doing a hybrid model where I had
+        library code in the root directory in their own folders and a
+        distributed directory structure for bespoken code due to the simplicity
+        of the project.
     </dd>
     <dt>Creating Node.js Native Addons with Node-API/N-API</dt>
     <dd>
-        The project originally was just going to be a wrapper for a CSV parser that
-        would end up looking for the missing IDs within a list of files. However, I
-        ended up deciding to create it into a full fledged web crawler. As such, I
-        needed to port my already-written C code to NodeJS. Although it took a while
-        to learn, I learned how to create native Node.js addons using Node-API.
+        The project originally was just going to be a wrapper for a CSV parser
+        that would end up looking for the missing IDs within a list of files.
+        However, I ended up deciding to create it into a full fledged web
+        crawler. As such, I needed to port my already-written C code to NodeJS.
+        Although it took a while to learn, I learned how to create native
+        Node.js addons using Node-API.
     </dd>
-    <dt>Makefiles, implicit variables and rules, and automatic dependency generation</dt>
+    <dt>
+        Makefiles, implicit variables and rules, and automatic dependency
+        generation
+    </dt>
     <dd>
-        While creating the Makefile, the first thing I learned was implicit variables
-        and rules where Makefiles can imply dependencies based off of the target
-        (such as main.c creating main.o) and compilation rules. These include
-        implicit variables and tags that could be set to use these implicit rules.
-        However, since I used a distributed directory structure, I had to write my
-        own rules to compile to different directories. This led to me researching
-        automatic dependency generation through some C preprocessor flags ultimately
-        simplifying the Makefile structure instead of explicitly writing every
-        dependency.
+        While creating the Makefile, the first thing I learned was implicit
+        variables and rules where Makefiles can imply dependencies based off of
+        the target (such as main.c creating main.o) and compilation rules. These
+        include implicit variables and tags that could be set to use these
+        implicit rules.  However, since I used a distributed directory
+        structure, I had to write my own rules to compile to different
+        directories. This led to me researching automatic dependency generation
+        through some C preprocessor flags ultimately simplifying the Makefile
+        structure instead of explicitly writing every dependency.
     </dd>
     <dt>Linking C object files and libraries</dt>
     <dd>
@@ -352,10 +366,11 @@ Node-API to link a csv builder to find out the next point.</p>
     </dd>
     <dt>Making ANSI- and ISO C89/C90-compliant C code</dt>
     <dd>
-        While I do end up using GNULib's argp library to create a main executable
-        (mainly for testing), all other code is ANSI compliant. While writing this,
-        I actually had the chance to learn the reasons for certain specifications of
-        the C89/C90 standards and how to accomodate the strict standards.
+        While I do end up using GNULib's argp library to create a main
+        executable (mainly for testing), all other code is ANSI compliant. While
+        writing this, I actually had the chance to learn the reasons for certain
+        specifications of the C89/C90 standards and how to accomodate the strict
+        standards.
     </dd>
 </dl>
         </article>
@@ -374,19 +389,22 @@ Node-API to link a csv builder to find out the next point.</p>
         <input type="image" class="close-modal-btn" src="/icons/close.svg">
         <h4>Scalable Database</h4>
         <article class="detailed-desc">
-            <p>A database with decentralized file storage clusters and a centralized cluster manager based on the
-Chord protocol. The goal was to dynamically add and remove clusters, allowing data migration
-between clusters by determining the predecessors and succesors using a consistent hashing method.
-Versioning was incremented based on differences of hashes of 4096-bit blocks of files (deleted files
-are marked as empty, but as an additional version); the database always assumed that if both the
-client and server's representation of the file changed, the server was correct to maintain consistent
-versioning between different clients. Servers and clients were coded in Go to ensure ease of
-concurrent connections.The final product was used and tested across multiple AWS EC2 instances in
-differnet regions.</p>
+            <p>A database with decentralized file storage clusters and a centralized cluster
+manager based on the Chord protocol. The goal was to dynamically add and remove
+clusters, allowing data migration between clusters by determining the
+predecessors and succesors using a consistent hashing method. Versioning was
+incremented based on differences of hashes of 4096-bit blocks of files (deleted
+files are marked as empty, but as an additional version); the database always
+assumed that if both the client and server's representation of the file changed,
+the server was correct to maintain consistent versioning between different
+clients. Servers and clients were coded in Go to ensure ease of concurrent
+connections.The final product was used and tested across multiple AWS EC2
+instances in differnet regions.</p>
 <ul>
-<li>Developed client and server in <a href="https://go.dev">Go</a> to foster concurrent connections.</li>
-<li>Utilized the Chord protocol for a distributed database over many file storage clusters to provide
-redundancy in case of network failures.</li>
+<li>Developed client and server in <a href="https://go.dev">Go</a> to foster concurrent
+connections.</li>
+<li>Utilized the Chord protocol for a distributed database over many file storage
+clusters to provide redundancy in case of network failures.</li>
 <li>Leveraged AWS EC2 instances for deployment of the servers and clusters.</li>
 </ul>
 

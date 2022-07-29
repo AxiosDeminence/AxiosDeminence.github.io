@@ -23,12 +23,22 @@ Initial Creation Date: **Mar. 28, 2022**
   </figure>
 </section>
 
+##### Short Summary:
 This portfolio website was created to maintain a list of projects, contact
 information, and my resume. Entirely written in native HTML, JS, and CSS. The
 only external libraries used and deployed are a dialog polyfill from the Google
 Chrome team and Lit Elements for web component hydration. I do also use the Vite
 to bundle my JavaScript files and Eleventy to statically generate the site. The
 icons within the webpage are taken from Bootstrap v1.8.1.
+
+##### Action Points:
+* Developed a website to host an online portfolio of past and current projects
+    for career development
+* Used [Eleventy](https://www.11ty.dev/) to statically generate the website and
+    increase modularity of website development
+* Leveraged [LitElement](https://lit.dev/) and [Vite](https://vitejs.dev/) to
+    support partial rehydration of web components and bundle JavaScript for page
+    load optimization
 
 ##### Notable things about this project:
 <dl>
@@ -66,3 +76,6 @@ icons within the webpage are taken from Bootstrap v1.8.1.
     </a>
   </dd>
 </dl>
+
+##### Relevant links:
+* [GitHub source code](https://github.com/AxiosDeminence/AxiosDeminence.github.io)

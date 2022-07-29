@@ -3,9 +3,12 @@ permalink: false
 tags: project
 title: Roleplay Roller Scraper
 brief_desc: NodeJS and Node-API powered web scraper to save a live relational
-    database with rows accessible on a website.
+    database with entries accessible on a website.
 rank: 2
 ---
+Start Date -- End Date: **Apr. 2022 -- Present**
+
+##### Short Summary:
 Some asynchronous roleplay communities use traditional tabletop RPG mechanics
 that would require the use of dice for some randomness. One community that I was
 a part of had a website dedicated to these rolls, but the owner of the website
@@ -14,8 +17,17 @@ preserve these rolls, which were necessary for some recordkeeping, I made a web
 scraper to save them into a CSV file using NodeJS to make and parse requests and
 Node-API to link a csv builder to find out the next point.
 
-##### Notable things about this project:
+##### Action Points:
+* Created a web scraper to save online dice rolls performed by a longstanding
+    roleplay community
+* Increased performance of the web scraper by binding an existing C library as
+    a native addon for node.js
+* Scraped dice rolls into valid CSV files to migrate to database systems that
+    support importing via CSV
+* Reduced the total number of queries by separating queries by dice roll ID and
+    the relevant character
 
+##### Notable things about this project:
 <dl>
     <dt>Project structure management and git submodules</dt>
     <dd>
@@ -63,3 +75,6 @@ Node-API to link a csv builder to find out the next point.
         standards.
     </dd>
 </dl>
+
+##### Relevant links:
+* [GitHub source code](https://github.com/AxiosDeminence/MeetingID_Experiment)

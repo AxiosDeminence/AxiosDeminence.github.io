@@ -6,6 +6,7 @@ brief_desc: PostgreSQL database and REST API using Django to help roleplayers
     manage inventories and transactions.
 rank: 6
 ---
+##### Short Summary:
 As someone who participates in a lot of forum roleplaying communities, it can be
 a pain to track and manage a character's inventory. If characters are trading
 amongst themselves, it can also be a pain for people who try and track which
@@ -15,10 +16,13 @@ use because the community decided that requiring its use would make things
 unnecessarily difficult for casual members, it still exists as a
 proof-of-concept.
 
+##### Action Points:
+* Developed a REST API with microservices to help users manage inventories of
+    their roleplay characters
 * Leveraged [Django](https://www.djangoproject.com/) and
     [Django REST Framework](https://www.django-rest-framework.org/) to manage
-    a PostgreSQL database.
+    a PostgreSQL database
 * Designed a relational schema divided into users, characters, inventories, and
-    transactions.
+    transactions
 * Used [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
-    for authentication of privileges for resource management.
+    for authentication of privileges for resource management

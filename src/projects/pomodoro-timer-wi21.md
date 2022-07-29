@@ -25,23 +25,22 @@ Start Date -- End Date: **Jan. 19, 2021 -- Mar. 20, 2021**
   </figure>
 </section>
 
+##### Short Summary:
 This was originally created as an academic project in my Software Engineering
 course. The ultimate goal of the course was to understand how to work in a team
 while practicing Agile methodologies to deliver a product that met a mock
 client's request and specifications. This project took eight weeks until its
 completion.
 
-##### Roles in the collaborative project:
-* Co-managed a team of eight developers to design and developer a web app using
-    native web technologies.
-* Deployed CI/CD pipeline using GitHub Actions to perform E2E testing with
-    [Cypress](https://www.cypress.io) and [Jest](https://jestjs.io).
-* Identified and developed necessary and quality of life features such as a
-    tasklist and audible timer.
-* Created tickets and reviewed other's pull requests to implement planned
-    features.
-* Participated in daily standup meetings with teammates and weekly meetings with
-    with the mock client.
+##### Action Points:
+* Managed a team of eight developers to design and develop a web app from
+    scratch native web technologies
+* Ensured adherence to agreed quality standards by performing code reviews and
+    regulating team practice
+* Participated in regular meetings with a mock stakeholder to continuously
+    receive feedback on the app
+* Created a test suite in the CI pipeline using [Jest](https://jestjs.io) for
+    unit/integration testing and [Cypress](https://cypress.io) for E2E testing
 
 ##### Relevant links:
 * [GitHub source code](https://github.com/malcolmmcswain/cse110-w21-group5)

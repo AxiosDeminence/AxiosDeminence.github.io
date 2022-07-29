@@ -44,22 +44,7 @@
       <section id="about">
         <h1>Juhmer Tena</h1>
         <h2>About Me</h2>
-        <p>
-          I'm Juhmer Tena, I studied Computer Science (B.S.) at University of California - San Diego
-          and graduated in June 2022. I am an aspiring Software Engineer and looking for full-time
-          employment.
-        </p>
-        <p>
-          My technical skills mainly revolve around backend development including and not limited to
-          working with relational databases and creating REST APIs, but also have some working
-          knowledge on frontend web development.
-        </p>
-        <p>
-          You can find
-          <a href="{{ '/tena_juhmer_resume.pdf' | url }}" target="_blank" rel="noreferrer">
-            my resume by clicking this link.
-          </a>
-        </p>
+        {% renderFile "./src/_includes/intro.md" %}
       </section>
       <section id="contact-info">
         <h3>My Contact Info</h3>

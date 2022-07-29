@@ -1,7 +1,11 @@
 const dialogPolyfillCss = require.resolve('dialog-polyfill/dist/dialog-polyfill.css');
 const dialogPolyfillJs = require.resolve('dialog-polyfill/dist/dialog-polyfill.js');
 
+const { EleventyRenderPlugin } = require('@11ty/eleventy');
+
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+
   eleventyConfig.setNunjucksEnvironmentOptions({
     trimBlocks: true,
     lstripBlocks: true
@@ -29,7 +33,6 @@ module.exports = function(eleventyConfig) {
       includes: '_includes',
       layouts: '_includes/_layouts'
     },
-    htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk'
+    htmlTemplateEngine: 'njk'
   }
 }
